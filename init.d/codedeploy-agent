@@ -21,21 +21,16 @@
 RETVAL=0
 [ -f /etc/profile ] && [ "`stat --format '%U %G' /etc/profile`" == "root root" ] && source /etc/profile
 
-prog="codedeploy-agent"
-AGENT_ROOT="/opt/codedeploy-agent/"
-INSTALLER="/opt/codedeploy-agent/bin/install"
-BIN="/opt/codedeploy-agent/bin/codedeploy-agent"
+BIN="codedeploy-agent"
 
 start() {
-        echo -n $"Starting $prog:"
-        cd $AGENT_ROOT
+        echo -n $"Starting $BIN:"
         nohup $BIN start >/dev/null </dev/null 2>&1  # Try to start the server
         exit $?
 }
 
 stop() {
-        echo -n $"Stopping $prog:"
-        cd $AGENT_ROOT
+        echo -n $"Stopping $BIN:"
         nohup $BIN stop >/dev/null </dev/null 2>&1  # Try to stop the server
         exit $?
 }
@@ -48,15 +43,8 @@ restart() {
 }
 
 status() {
-        cd $AGENT_ROOT
         $BIN status # Status of the server
         exit $?
-}
-
-update() {
-        echo -n $"Updating $prog:"
-        cd $AGENT_ROOT
-        $INSTALLER auto #Update the agent
 }
 
 case "$1" in
