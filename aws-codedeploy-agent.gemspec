@@ -5,7 +5,7 @@ $:.push File.expand_path("../vendor/gems/process_manager/lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name          = 'aws-codedeploy-agent'
-  s.version       = '0.0.1'
+  s.version       = '0.0.2'
   s.license       = 'Apache-2.0'
   s.summary       = 'AWS CodeDeploy Agent'
   s.description   = 'CodeDeploy Agent is responsible for doing the actual work of deploying software on an individual EC2 instance.'
