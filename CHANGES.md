@@ -1,3 +1,12 @@
+# 0.0.5
+
+* Pulled from upstream/master to support SHA-256. (panthomakos)
+
+# 0.0.3/0.0.4
+
+* Pulled from upstream/master to include new CA certificate. (panthomakos)
+* Updated gemspec from upstream/master. (panthomakos)
+
 # 0.0.2
 
 * Fix hanging deployment issue, where the server responds to a command

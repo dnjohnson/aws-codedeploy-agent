@@ -1,6 +1,6 @@
 # encoding: UTF-8
 
-require 'core_ext'
+require_relative 'core_ext'
 require 'process_manager'
 
 unless defined?(InstanceAgent)
